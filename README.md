@@ -1,8 +1,8 @@
-# SmartThings SmartApp -- Ambient Weather Statioin Integration
+# SmartThings SmartApp - Ambient Weather Statioin Integration
 The purpose of this repo is to provide an updated implementation for accessing data from your local Ambient Weather Station (AWS) on the SmartThings platform.
 This was done in the past using a SmartThings SmartApp that was built with groovy, but that has since been deprecated. SmartThings now utilizes a [Node.js SDK](https://github.com/SmartThingsCommunity/smartapp-sdk-nodejs) for developing SmartApps for their platform
 
-## Preliminiary Research
+## Preliminary Research
 - An API Keys need to be created on the Ambient Weather Network (AWN) before being able to access the Ambient Weather API
   - `applicationKey`
   - `apiKey`
