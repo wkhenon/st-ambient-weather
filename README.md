@@ -13,6 +13,8 @@ This was done in the past using a SmartThings SmartApp that was built with groov
   
 ### Project Log
 - [X] Repo Refactor: update readme, move `unsupported` to new `smartthings` folder
+- [X] Added readme to `unsupported` directory
+- 
 
 #### Potential Setbacks
 - [ambientweather.net](https://ambientweather.net/) fails to load at points
