@@ -5,3 +5,4 @@
 *.groovy___jb_old___
 /hubitat/hpm
 node_modules*
+notes

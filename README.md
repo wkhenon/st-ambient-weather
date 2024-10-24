@@ -24,12 +24,36 @@ This was done in the past using a SmartThings SmartApp that was built with groov
   - A `ngrok` account is needed for this step (it's free!)
   - The app needs to be running for public URL access through ngrok
 
+## SmartThings SmartApp Creation
+- Following the steps provided in [Create a SmartApp](https://developer.smartthings.com/docs/connected-services/create-a-smartapp).
+  - ["Services with a Complex App"](https://developer.smartthings.com/docs/connected-services/create-a-smartapp#services-with-a-complex-smartapp) will be needed since we want to reach out to transmit/receive data from Ambient Weather.
+- Need to have the app running with the public URL
+- SmartThings Developer Workspace -> Create a New Project -> Automation for the SmartThings App
+- Project Name: "Ambient Weather"
+- Select "Register App" -> Webhook Endpoint
+- There is a requirement by the SmartThings SmartApp to handle a confirmation request from SmartThings by issuing a HTTP GET request to confirmationURL:
+
+  <p align="center">
+    <img src="images/smartapp-confirmation-request.png" />
+  </p>
+  
+- The current implemenation for the SmartApp is returning a `404` whenever SmartThings attempts to verify it with this request:
+
+  <p align="center">
+    <img src="images/confirmation-request-error.png" />
+  </p>
+
+- This is due to how barebones the implementation is now, but it lets us know that we're in a position to start developing the actual implementation for the SmartApp!
+
 ### Project Log
 - [X] Repo Refactor: update readme, move `unsupported` to new `smartthings` folder
 - [X] Added readme to `unsupported` directory
 - [X] Initial Simple App set-up with local server for testing/development
+- [X] SmartThings SmartApp creation on the Developer Workspace
+- [ ] `ambient-api` Integration: locally serve weather data at the endpoint
 
 #### Potential Setbacks
 - [ambientweather.net](https://ambientweather.net/) fails to load at points
 - [glitch.com](glitch.com) fails to load at points
 - Web-hosting fees depending on the size/service calls of the SmartApp
+- `ngrok` generates a random URL everytime the server is started; this could potentially be fixed by following [these steps](https://ngrok.com/blog-post/free-static-domains-ngrok-users).
