@@ -47,7 +47,7 @@ This was done in the past using a SmartThings SmartApp that was built with groov
 
 ## Basic Ambient Weather API Integration
 - Install the API: `npm install ambient-weather-api` (This adds the API to the list of dependencies for the .js project)
-- 
+- Install `dotenv` in order to use the `.env` file where the keys will be stored: `npm install dotenv`
 
 ### Project Log
 - [X] Repo Refactor: update readme, move `unsupported` to new `smartthings` folder
