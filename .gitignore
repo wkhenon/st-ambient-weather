@@ -6,3 +6,4 @@
 /hubitat/hpm
 node_modules*
 notes
+.env
