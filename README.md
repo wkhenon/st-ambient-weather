@@ -17,6 +17,11 @@ This was done in the past using a SmartThings SmartApp that was built with groov
   sudo apt install nodejs npm
   snap install ngrok
   ```
+  - The following `npm` packages need to be installed:
+    ```
+    npm install express
+    npm install dotenv
+    ```
 - `server.js`: This is where the SmartApp will be created for the platform; for now it just starts a simple app with the Express framework. 
   - The `ambient-weather-api/ambient-api` and `SmartThings SmartApp Node.js SDK` will need to be imported in.
 - Run the server: `node server.js`
